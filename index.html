@@ -3,18 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Regilene Mariano — Engenheira de dados & Educadora em Tech</title>
+<title>Regilene Mariano — Engenheira de Dados & Educadora em Tech</title>
 <meta name="description" content="Ideias grandes em tecnologia, explicadas do jeito que você merece entender. Engenheira de dados, ex-professora, criadora de conteúdo e comunidade de mulheres em tech.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
-/* ── Reset & Base ──────────────────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --org:#E8732A;
   --org-d:#C45C00;
-  --org-dd:#A34A00;
   --org-l:rgba(232,115,42,0.12);
   --org-ll:rgba(232,115,42,0.07);
   --fg:#F5F0EB;
@@ -31,365 +29,168 @@
   --radius-lg:16px;
 }
 html{scroll-behavior:smooth}
-body{
-  font-family:var(--sans);
-  background:var(--bg);
-  color:var(--fg);
-  font-size:15px;
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
+body{font-family:var(--sans);background:var(--bg);color:var(--fg);font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:var(--org);text-decoration:none}
 a:hover{color:var(--org-d)}
-img{max-width:100%;display:block}
-
-/* ── Utility ───────────────────────────────────────────────────────────── */
 .container{max-width:900px;margin:0 auto;padding:0 28px}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-/* ── Nav ───────────────────────────────────────────────────────────────── */
-nav{
-  position:sticky;top:0;z-index:100;
-  background:rgba(20,20,20,0.92);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-}
-.nav-inner{
-  max-width:900px;margin:0 auto;padding:0 28px;
-  display:flex;align-items:center;justify-content:space-between;
-  height:58px;
-}
-.nav-logo{
-  font-family:var(--serif);
-  font-size:18px;
-  color:var(--fg);
-  letter-spacing:-.01em;
-}
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(20,20,20,0.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:900px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:58px}
+.nav-logo{font-family:var(--serif);font-size:18px;color:var(--fg);letter-spacing:-.01em}
 .nav-logo span{color:var(--org)}
 .nav-links{display:flex;gap:6px;list-style:none}
-.nav-links a{
-  font-size:13px;
-  font-weight:400;
-  color:var(--fg2);
-  padding:6px 12px;
-  border-radius:20px;
-  transition:all .18s ease;
-}
+.nav-links a{font-size:13px;font-weight:400;color:var(--fg2);padding:6px 12px;border-radius:20px;transition:all .18s ease}
 .nav-links a:hover{color:var(--org);background:var(--org-l)}
 .nav-links a.active{color:var(--org);background:var(--org-l);font-weight:500}
 
-/* ── Sections / Pages ──────────────────────────────────────────────────── */
+/* PAGES */
 .page{display:none}
 .page.active{display:block}
 
-/* ── Hero ──────────────────────────────────────────────────────────────── */
-.hero{
-  padding:72px 0 56px;
-  border-bottom:1px solid var(--border);
-}
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:12px;font-weight:500;letter-spacing:.06em;
-  color:var(--org);text-transform:uppercase;
-  background:var(--org-l);
-  padding:5px 14px;border-radius:20px;
-  margin-bottom:24px;
-}
-.hero-eyebrow::before{
-  content:'';width:6px;height:6px;
-  border-radius:50%;background:var(--org);
-  animation:pulse 2s ease-in-out infinite;
-}
+/* HERO */
+.hero{padding:72px 0 56px;border-bottom:1px solid var(--border)}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--org);text-transform:uppercase;background:var(--org-l);padding:5px 14px;border-radius:20px;margin-bottom:24px}
+.hero-eyebrow::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--org);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-.hero h1{
-  font-family:var(--serif);
-  font-size:clamp(32px,5vw,52px);
-  font-weight:400;
-  line-height:1.15;
-  letter-spacing:-.02em;
-  color:var(--fg);
-  margin-bottom:20px;
-}
+.hero h1{font-family:var(--serif);font-size:clamp(32px,5vw,52px);font-weight:400;line-height:1.15;letter-spacing:-.02em;color:var(--fg);margin-bottom:20px}
 .hero h1 em{font-style:italic;color:var(--org)}
-.hero-sub{
-  font-size:16px;
-  color:var(--fg2);
-  max-width:520px;
-  line-height:1.7;
-  margin-bottom:32px;
-}
+.hero-sub{font-size:16px;color:var(--fg2);max-width:520px;line-height:1.7;margin-bottom:32px}
 .hero-sub strong{color:var(--fg);font-weight:500}
 .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
-.hero-stats{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:1px;
-  background:var(--border);
-  border:1px solid var(--border);
-  border-radius:var(--radius-lg);
-  overflow:hidden;
-  max-width:540px;
-}
-.hero-stat{
-  background:var(--bg);
-  padding:20px 24px;
-  display:flex;flex-direction:column;gap:4px;
-}
-.hero-stat-n{
-  font-family:var(--serif);
-  font-size:28px;
-  color:var(--org);
-  line-height:1;
-}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;max-width:540px}
+.hero-stat{background:var(--bg);padding:20px 24px;display:flex;flex-direction:column;gap:4px}
+.hero-stat-n{font-family:var(--serif);font-size:28px;color:var(--org);line-height:1}
 .hero-stat-l{font-size:12px;color:var(--fg3);line-height:1.3}
 
-/* ── Buttons ───────────────────────────────────────────────────────────── */
-.btn{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:11px 24px;border-radius:8px;
-  font-size:14px;font-weight:500;
-  cursor:pointer;border:none;
-  transition:all .18s ease;
-  font-family:var(--sans);
-  letter-spacing:-.01em;
-}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 24px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer;border:none;transition:all .18s ease;font-family:var(--sans);letter-spacing:-.01em}
 .btn-primary{background:var(--org);color:#fff}
-.btn-primary:hover{background:var(--org-d);transform:translateY(-1px);box-shadow:0 4px 16px rgba(196,92,0,.25)}
+.btn-primary:hover{background:var(--org-d);transform:translateY(-1px);box-shadow:0 4px 16px rgba(196,92,0,.3)}
 .btn-ghost{background:transparent;color:var(--fg);border:1px solid var(--border2)}
 .btn-ghost:hover{border-color:var(--org);color:var(--org);background:var(--org-l)}
 .btn-sm{padding:8px 16px;font-size:13px}
 
-/* ── Section labels ────────────────────────────────────────────────────── */
-.section-label{
-  font-size:11px;font-weight:500;
-  color:var(--org);letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-bottom:16px;
-  display:flex;align-items:center;gap:8px;
-}
-.section-label::after{
-  content:'';flex:1;height:1px;background:var(--border);
-}
+/* SECTION LABEL */
+.section-label{font-size:11px;font-weight:500;color:var(--org);letter-spacing:.08em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.section-label::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* ── Cards ─────────────────────────────────────────────────────────────── */
-.card{
-  background:var(--bg);
-  border:1px solid var(--border);
-  border-radius:var(--radius-lg);
-  padding:20px;
-  transition:border-color .18s,box-shadow .18s;
-}
-.card:hover{border-color:var(--border2);box-shadow:0 2px 12px rgba(0,0,0,.04)}
-.card-accent{border-left:3px solid var(--org)}
-.card-featured{border-color:var(--org);background:var(--org-ll)}
+/* CARDS */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;transition:border-color .18s,box-shadow .18s}
+.card:hover{border-color:var(--border2);box-shadow:0 2px 16px rgba(0,0,0,.3)}
+.card-accent{border-left:3px solid var(--org);border-radius:0 var(--radius-lg) var(--radius-lg) 0}
 
-/* ── Tags / Pills ──────────────────────────────────────────────────────── */
-.tag{
-  display:inline-block;
-  font-size:11px;font-weight:500;
-  padding:3px 10px;border-radius:20px;
-  background:var(--org-l);color:var(--org-d);
-  margin-bottom:8px;
-}
+/* TAGS & PILLS */
+.tag{display:inline-block;font-size:11px;font-weight:500;padding:3px 10px;border-radius:20px;background:var(--org-l);color:var(--org);margin-bottom:8px}
 .tag-tech{background:rgba(26,92,56,0.25);color:#6FCF97}
 .tag-edu{background:rgba(44,62,122,0.25);color:#7B9EE8}
 .tag-com{background:rgba(74,35,90,0.25);color:#C89EE0}
-.tag-soon{background:var(--bg3);color:var(--fg3)}
-.pill{
-  display:inline-block;
-  font-size:11px;
-  padding:3px 10px;border-radius:20px;
-  background:var(--bg2);color:var(--fg2);
-  border:1px solid var(--border);
-  margin:3px 2px;
-}
+.pill{display:inline-block;font-size:11px;padding:3px 10px;border-radius:20px;background:var(--bg3);color:var(--fg2);border:1px solid var(--border2);margin:3px 2px}
 
-/* ── Grid layouts ──────────────────────────────────────────────────────── */
+/* GRIDS */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 
-/* ── Section padding ───────────────────────────────────────────────────── */
+/* SECTIONS */
 .section{padding:48px 0;border-bottom:1px solid var(--border)}
 .section:last-child{border-bottom:none}
-.section-sm{padding:32px 0;border-bottom:1px solid var(--border)}
 
-/* ── Timeline ──────────────────────────────────────────────────────────── */
-.timeline{display:flex;flex-direction:column;gap:0}
-.timeline-item{
-  display:flex;gap:20px;
-  padding:20px 0;
-  border-bottom:1px solid var(--border);
-}
+/* TIMELINE */
+.timeline{display:flex;flex-direction:column}
+.timeline-item{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--border)}
 .timeline-item:last-child{border-bottom:none}
-.timeline-dot{
-  width:10px;height:10px;border-radius:50%;
-  background:var(--org);flex-shrink:0;
-  margin-top:8px;position:relative;
-}
-.timeline-dot.current{background:var(--org);box-shadow:0 0 0 4px var(--org-l)}
+.timeline-dot{width:10px;height:10px;border-radius:50%;background:var(--org);flex-shrink:0;margin-top:8px}
+.timeline-dot.current{box-shadow:0 0 0 4px var(--org-l)}
 .timeline-content{flex:1}
 .timeline-date{font-size:12px;color:var(--fg3);margin-bottom:4px}
 .timeline-title{font-weight:500;font-size:15px;margin-bottom:2px}
 .timeline-company{font-size:13px;color:var(--org);margin-bottom:6px}
 .timeline-desc{font-size:13px;color:var(--fg2);line-height:1.6}
 
-/* ── Skill bars ────────────────────────────────────────────────────────── */
+/* SKILLS */
 .skill{margin-bottom:14px}
 .skill-header{display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px}
 .skill-level{color:var(--org);font-weight:500;font-size:12px}
 .skill-track{height:4px;background:var(--bg3);border-radius:2px;overflow:hidden}
-.skill-fill{height:100%;background:var(--org);border-radius:2px;transition:width .6s ease}
+.skill-fill{height:100%;background:var(--org);border-radius:2px}
 
-/* ── Project cards ─────────────────────────────────────────────────────── */
-.project-card{
-  background:var(--bg);
-  border:1px solid var(--border);
-  border-radius:var(--radius-lg);
-  padding:20px;
-  transition:all .2s ease;
-}
-.project-card:hover{border-color:var(--org-d);transform:translateY(-2px);box-shadow:0 8px 24px rgba(196,92,0,.1)}
+/* PROJECT CARDS */
+.project-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;transition:all .2s ease;margin-bottom:14px}
+.project-card:hover{border-color:var(--org-d);transform:translateY(-2px);box-shadow:0 8px 24px rgba(232,115,42,.08)}
 .project-meta{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;margin-bottom:10px}
-.project-year{font-size:11px;color:var(--fg3);background:var(--bg2);padding:3px 10px;border-radius:20px}
+.project-year{font-size:11px;color:var(--fg3);background:var(--bg3);padding:3px 10px;border-radius:20px}
 .project-title{font-size:15px;font-weight:500;margin-bottom:8px;line-height:1.35}
 .project-desc{font-size:13px;color:var(--fg2);line-height:1.65;margin-bottom:12px}
 .project-stack{display:flex;flex-wrap:wrap;gap:4px}
 
-/* ── Articles ──────────────────────────────────────────────────────────── */
-.article-item{
-  display:flex;gap:16px;padding:18px 0;
-  border-bottom:1px solid var(--border);
-  transition:opacity .15s;
-  cursor:pointer;
-}
+/* ARTICLES */
+.article-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:opacity .15s}
 .article-item:last-child{border-bottom:none}
-.article-item:hover{opacity:.75}
-.article-icon{
-  width:50px;height:50px;border-radius:10px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:20px;flex-shrink:0;
-}
+.article-item:hover{opacity:.7}
+.article-icon{width:50px;height:50px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
 .article-title{font-size:14px;font-weight:500;line-height:1.4;margin:4px 0 6px;color:var(--fg)}
 .article-meta{font-size:11px;color:var(--fg3)}
 
-/* ── Newsletter box ────────────────────────────────────────────────────── */
-.newsletter-box{
-  background:rgba(232,115,42,0.1);
-  border:1px solid rgba(232,115,42,0.25);
-  border-radius:var(--radius-lg);
-  padding:24px;
-}
+/* NEWSLETTER */
+.newsletter-box{background:rgba(232,115,42,0.1);border:1px solid rgba(232,115,42,0.25);border-radius:var(--radius-lg);padding:24px}
 .newsletter-box h3{font-size:16px;font-weight:500;color:var(--org);margin-bottom:6px}
 .newsletter-box p{font-size:13px;color:var(--fg2);margin-bottom:16px;line-height:1.6}
 .newsletter-row{display:flex;gap:10px}
 .newsletter-row input{flex:1}
 
-/* ── Book list ─────────────────────────────────────────────────────────── */
-.book-item{
-  display:flex;gap:14px;align-items:center;
-  padding:14px 0;border-bottom:1px solid var(--border);
-}
+/* BOOKS */
+.book-item{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--border)}
 .book-item:last-child{border-bottom:none}
-.book-cover{
-  width:40px;height:54px;border-radius:5px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:20px;flex-shrink:0;
-}
+.book-cover{width:40px;height:54px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
 .book-title{font-size:14px;font-weight:500;margin-bottom:2px}
 .book-author{font-size:12px;color:var(--fg3)}
 
-/* ── Form ──────────────────────────────────────────────────────────────── */
+/* FORM */
 .form-group{margin-bottom:12px}
 .form-group label{font-size:12px;font-weight:500;color:var(--fg2);display:block;margin-bottom:5px}
-input,select,textarea{
-  width:100%;
-  font-size:14px;
-  font-family:var(--sans);
-  padding:10px 14px;
-  border:1px solid var(--border2);
-  border-radius:var(--radius);
-  background:var(--bg);
-  color:var(--fg);
-  transition:border-color .15s,box-shadow .15s;
-  outline:none;
-}
-input:focus,select:focus,textarea:focus{
-  border-color:var(--org);
-  box-shadow:0 0 0 3px rgba(196,92,0,.12);
-}
+input,select,textarea{width:100%;font-size:14px;font-family:var(--sans);padding:10px 14px;border:1px solid var(--border2);border-radius:var(--radius);background:var(--bg2);color:var(--fg);transition:border-color .15s,box-shadow .15s;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--org);box-shadow:0 0 0 3px rgba(232,115,42,.15)}
 textarea{height:90px;resize:vertical;line-height:1.6}
-select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238C7A6A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236E6660' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
 
-/* ── Social rows ───────────────────────────────────────────────────────── */
-.social-item{
-  display:flex;align-items:center;gap:14px;
-  padding:14px 16px;
-  border:1px solid var(--border);border-radius:var(--radius);
-  margin-bottom:10px;cursor:pointer;
-  transition:all .15s;
-}
+/* SOCIAL */
+.social-item{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;cursor:pointer;transition:all .15s}
 .social-item:hover{border-color:var(--org);background:var(--org-ll)}
-.social-icon{
-  width:32px;height:32px;border-radius:8px;
-  display:flex;align-items:center;justify-content:center;
-  font-size:13px;font-weight:600;flex-shrink:0;
-}
+.social-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0}
 .social-name{font-size:14px;font-weight:500;color:var(--fg)}
 .social-handle{font-size:12px;color:var(--fg3)}
 
-/* ── Course cards ──────────────────────────────────────────────────────── */
-.course-card{
-  border:1px solid var(--border);
-  border-radius:var(--radius-lg);
-  overflow:hidden;
-  transition:box-shadow .2s;
-}
-.course-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.06)}
+/* COURSE CARDS */
+.course-card{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:box-shadow .2s;margin-bottom:16px}
+.course-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.4)}
 .course-header{background:var(--org);padding:20px;color:#fff}
 .course-header.muted{background:var(--bg3)}
 .course-eyebrow{font-size:11px;opacity:.8;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
 .course-title{font-size:17px;font-weight:500;margin-bottom:4px}
 .course-sub{font-size:13px;opacity:.85}
-.course-body{background:var(--bg);padding:20px}
+.course-body{background:var(--bg2);padding:20px}
 .course-price{font-family:var(--serif);font-size:26px;color:var(--org);line-height:1}
 .course-price-label{font-size:11px;color:var(--fg3);margin-bottom:4px}
 .course-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:16px;padding-top:16px;border-top:1px solid var(--border)}
 
-/* ── Avatar ────────────────────────────────────────────────────────────── */
-.avatar{
-  width:56px;height:56px;border-radius:50%;
-  background:var(--org);color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--serif);font-size:20px;
-  flex-shrink:0;
-}
+/* AVATAR */
+.avatar{width:56px;height:56px;border-radius:50%;background:var(--org);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:20px;flex-shrink:0}
 
-/* ── Footer ────────────────────────────────────────────────────────────── */
-footer{
-  padding:32px 28px;
-  border-top:1px solid var(--border);
-  text-align:center;
-  font-size:12px;color:var(--fg3);
-}
+/* FOOTER */
+footer{padding:32px 28px;border-top:1px solid var(--border);text-align:center;font-size:12px;color:var(--fg3)}
 footer strong{color:var(--org);font-weight:500}
 
-/* ── Animations ────────────────────────────────────────────────────────── */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(16px)}
-  to{opacity:1;transform:translateY(0)}
-}
-.page.active .container>*{
-  animation:fadeUp .35s ease both;
-}
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.page.active .container>*{animation:fadeUp .35s ease both}
 .page.active .container>*:nth-child(2){animation-delay:.05s}
 .page.active .container>*:nth-child(3){animation-delay:.1s}
 .page.active .container>*:nth-child(4){animation-delay:.15s}
 
-/* ── Mobile ────────────────────────────────────────────────────────────── */
+/* MOBILE */
 @media(max-width:640px){
   .nav-links a{padding:6px 8px;font-size:12px}
-  .grid-2,.grid-3{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
   .hero h1{font-size:30px}
   .hero-stats{grid-template-columns:1fr}
   .newsletter-row{flex-direction:column}
@@ -399,7 +200,7 @@ footer strong{color:var(--org);font-weight:500}
 </head>
 <body>
 
-<h1 class="sr-only">Regilene Mariano - Engenheira de dados e professora em Tecnologia</h1>
+<h1 class="sr-only">Regilene Mariano — Engenheira de Dados e Professora em Tecnologia</h1>
 
 <nav>
   <div class="nav-inner">
@@ -415,19 +216,20 @@ footer strong{color:var(--org);font-weight:500}
   </div>
 </nav>
 
-<!-- ══════════════════════════════════════════════ INÍCIO ══ -->
+
+<!-- ══════════════ INÍCIO ══════════════════════════════════════════════ -->
 <div id="home" class="page active">
 <div class="container">
 
   <section class="hero">
-    <div class="hero-eyebrow">Engenheira de dados · Professor · Ribeirão Preto, SP</div>
+    <div class="hero-eyebrow">Engenheira de Dados · Professora · Ribeirão Preto, SP </div>
     <h1>
       Fui professora por 17 anos.<br>
       Hoje sou Engenheira de Dados.<br>
       <em>E ainda não parei de ensinar.</em>
     </h1>
     <p class="hero-sub">
-      <strong> Ideias grandes em tecnologia, explicadas do jeito que você merece entender.</strong><br>
+      <strong>Ideias grandes em tecnologia, explicadas do jeito que você merece entender.</strong><br>
       Tutoriais, cursos práticos e uma comunidade que acredita que tecnologia também é lugar de mulher.
     </p>
     <div class="hero-ctas">
@@ -440,12 +242,12 @@ footer strong{color:var(--org);font-weight:500}
         <span class="hero-stat-l">anos como professora</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-n">2</span>
-        <span class="hero-stat-l">idiomas fluentes</span>
+        <span class="hero-stat-n">4</span>
+        <span class="hero-stat-l">idiomas</span>
       </div>
       <div class="hero-stat">
         <span class="hero-stat-n">AWS</span>
-        <span class="hero-stat-l">Databricks·Azure·GCP·PySpark·</span>
+        <span class="hero-stat-l">Databricks · Azure · GCP</span>
       </div>
     </div>
   </section>
@@ -456,7 +258,7 @@ footer strong{color:var(--org);font-weight:500}
       <div class="card card-accent" style="cursor:pointer" onclick="go('cursos')">
         <div style="font-size:22px;margin-bottom:10px">📚</div>
         <div style="font-weight:500;font-size:15px;margin-bottom:6px">Cursos de dados</div>
-        <div style="font-size:13px;color:var(--fg2)">Conteúdo técnico com linguagem acessível - feito por quem vive os dois lados: educação e engenharia de dados.</div>
+        <div style="font-size:13px;color:var(--fg2)">Conteúdo técnico com linguagem acessível — feito por quem vive os dois lados: educação e engenharia de dados.</div>
       </div>
       <div class="card card-accent" style="cursor:pointer" onclick="go('artigos')">
         <div style="font-size:22px;margin-bottom:10px">✍️</div>
@@ -466,7 +268,7 @@ footer strong{color:var(--org);font-weight:500}
       <div class="card card-accent" style="cursor:pointer" onclick="go('portfolio')">
         <div style="font-size:22px;margin-bottom:10px">💼</div>
         <div style="font-weight:500;font-size:15px;margin-bottom:6px">Portfolio técnico</div>
-        <div style="font-size:13px;color:var(--fg2)">Projetos reais em AWS, Databricks e GCP - incluindo LLM e RAG.</div>
+        <div style="font-size:13px;color:var(--fg2)">Projetos reais em AWS, Databricks e GCP — incluindo LLMs e RAG.</div>
       </div>
       <div class="card card-accent" style="cursor:pointer" onclick="go('artigos')">
         <div style="font-size:22px;margin-bottom:10px">👥</div>
@@ -484,7 +286,7 @@ footer strong{color:var(--org);font-weight:500}
         Pipeline de dados na AWS do zero — Glue, S3 e Athena explicados sem enrolação
       </div>
       <div style="font-size:13px;color:var(--fg2);line-height:1.65;margin-bottom:16px">
-        Um guia prático com os três serviços mais usados em Engenharia de dados na AWS. Para quem quer entender o fluxo completo antes de colocar a mão no código.
+        Um guia prático com os três serviços mais usados em Engenharia de Dados na AWS. Para quem quer entender o fluxo completo antes de colocar a mão no código.
       </div>
       <button class="btn btn-ghost btn-sm" onclick="go('artigos')">ler artigo →</button>
     </div>
@@ -501,7 +303,12 @@ footer strong{color:var(--org);font-weight:500}
     </div>
   </section>
 
-<!-- ══════════════════════════════════════════════ SOBRE ══ -->
+</div>
+</div>
+<!-- ══════════════ FIM INÍCIO ══════════════════════════════════════════ -->
+
+
+<!-- ══════════════ SOBRE ═══════════════════════════════════════════════ -->
 <div id="sobre" class="page">
 <div class="container">
 
@@ -510,19 +317,18 @@ footer strong{color:var(--org);font-weight:500}
       <div class="avatar">RM</div>
       <div>
         <div style="font-family:var(--serif);font-size:22px;line-height:1.2;margin-bottom:4px">Regilene Mariano</div>
-        <div style="font-size:14px;color:var(--fg2);margin-bottom:2px">Engenheira de dados · Educadora · Criadora de conteúdo</div>
-        <div style="font-size:12px;color:var(--org)">Ribeirão Preto, SP· Brasil</div>
+        <div style="font-size:14px;color:var(--fg2);margin-bottom:2px">Engenheira de Dados · Educadora · Criadora de conteúdo</div>
+        <div style="font-size:12px;color:var(--org)">Maringá, Paraná · Brasil</div>
       </div>
     </div>
-
     <p style="color:var(--fg2);margin-bottom:14px;line-height:1.75">
-      Passei mais de 15 anos como professora.
+      Passei mais de 15 anos como professora — na Unicamp, em escolas públicas, no programa PIBID e em projetos de alfabetização durante a pandemia. Aprendi que ensinar bem é uma habilidade rara, e que a maioria das pessoas desiste de aprender tecnologia não porque é burra, mas porque ninguém explicou direito.
     </p>
     <p style="color:var(--fg2);margin-bottom:14px;line-height:1.75">
-      Em 2024 fiz uma das decisões mais difíceis e mais certas da minha vida: migrei para Engenharia de dadosi. Hoje trabalho com AWS e Databricks. Conheço Azure, GCP. Incluindo LLM e RAG. Falo português e inglês, e um pouco de alemão e francês.
+      Em 2024 fiz uma das decisões mais difíceis e mais certas da minha vida: migrei para Engenharia de Dados. Hoje trabalho com AWS, Databricks, Azure e GCP — incluindo projetos com LLMs e RAG. Falo português, inglês e um pouco de alemão e francês.
     </p>
     <p style="color:var(--fg2);line-height:1.75">
-      Organizo encontros de mulheres na tecnologia, participo de hackathons e publico tutoriais técnicos toda semana. A professora nunca foi embora - só mudou de sala de aula.
+      Organizo encontros de mulheres na tecnologia, participo de hackathons e publico tutoriais técnicos toda semana. A professora nunca foi embora — só mudou de sala de aula.
     </p>
   </section>
 
@@ -549,7 +355,7 @@ footer strong{color:var(--org);font-weight:500}
       <div class="skill-track"><div class="skill-fill" style="width:55%"></div></div>
     </div>
     <div class="skill">
-      <div class="skill-header"><span>Git · CI/CD </span><span class="skill-level">intermediário</span></div>
+      <div class="skill-header"><span>Git · CI/CD</span><span class="skill-level">intermediário</span></div>
       <div class="skill-track"><div class="skill-fill" style="width:68%"></div></div>
     </div>
   </section>
@@ -580,7 +386,7 @@ footer strong{color:var(--org);font-weight:500}
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <div class="timeline-date">mai 2025 – nov 2025</div>
-          <div class="timeline-title">Engenheira de dados Intern</div>
+          <div class="timeline-title">Engenheira de Dados Intern</div>
           <div class="timeline-company">Tekwerth (empresa alemã) · Campinas, SP</div>
           <div class="timeline-desc">Pipelines escaláveis em AWS (Glue, EMR, S3, Athena), Databricks e PySpark. Medallion Architecture (Bronze, Silver, Gold).</div>
         </div>
@@ -597,10 +403,10 @@ footer strong{color:var(--org);font-weight:500}
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
-          <div class="timeline-date">2013 – 2022</div>
+          <div class="timeline-date">2005 – 2022</div>
           <div class="timeline-title">Professora · Assistente de Ensino</div>
           <div class="timeline-company">UEAP · FEEC/Unicamp · Notre Dame</div>
-          <div class="timeline-desc">15+ anos na Área da educação. Formação em Matemática, Análise e Desenvolvimento de Sistemas, Pedagogia, Filosofia, Letras.</div>
+          <div class="timeline-desc">15+ anos na área da educação. Formação em Matemática, Análise e Desenvolvimento de Sistemas, Pedagogia, Filosofia e Letras.</div>
         </div>
       </div>
     </div>
@@ -630,76 +436,76 @@ footer strong{color:var(--org);font-weight:500}
 
 </div>
 </div>
+<!-- ══════════════ FIM SOBRE ═══════════════════════════════════════════ -->
 
-<!-- ══════════════════════════════════════════════ PORTFOLIO ══ -->
+
+<!-- ══════════════ PORTFOLIO ══════════════════════════════════════════ -->
 <div id="portfolio" class="page">
 <div class="container">
 
   <section class="section">
     <div class="section-label">projetos técnicos</div>
-    <div style="display:flex;flex-direction:column;gap:14px">
 
-      <div class="project-card">
-        <div class="project-meta">
-          <div class="tag tag-tech">Engenheira de dadosing · IA · Healthcare</div>
-          <span class="project-year">2025 · Indicium</span>
-        </div>
-        <div class="project-title">Pipeline de auditoria médica com IA — GCP</div>
-        <div class="project-desc">Estruturação de pipelines de ingestão de dados médico-hospitalares no Google Cloud Platform. Preparação de bases para LLMs e AI Agents. Suporte a governança, qualidade de dados e automação com Python para auditoria de faturamento hospitalar.</div>
-        <div class="project-stack">
-          <span class="pill">GCP</span><span class="pill">LLMs</span><span class="pill">RAG</span><span class="pill">AI Agents</span><span class="pill">Python</span><span class="pill">DeepEval</span><span class="pill">RAGAS</span>
-        </div>
+    <div class="project-card">
+      <div class="project-meta">
+        <div class="tag tag-tech">Data Engineering · IA · Healthcare</div>
+        <span class="project-year">2025 · Indicium</span>
       </div>
-
-      <div class="project-card">
-        <div class="project-meta">
-          <div class="tag tag-tech">AWS · Databricks · ETL</div>
-          <span class="project-year">2025 · Tekwerth</span>
-        </div>
-        <div class="project-title">Pipelines escaláveis com Medallion Architecture</div>
-        <div class="project-desc">Desenvolvimento e manutenção de pipelines de dados com AWS Glue, EMR, S3, Athena e Databricks. Transformação de dados nas camadas Bronze, Silver e Gold. Scripts PySpark e SQL para processamento eficiente, modelagem e qualidade de dados.</div>
-        <div class="project-stack">
-          <span class="pill">AWS Glue</span><span class="pill">EMR</span><span class="pill">S3</span><span class="pill">Athena</span><span class="pill">Databricks</span><span class="pill">PySpark</span><span class="pill">SQL</span>
-        </div>
+      <div class="project-title">Pipeline de auditoria médica com IA — GCP</div>
+      <div class="project-desc">Estruturação de pipelines de ingestão de dados médico-hospitalares no Google Cloud Platform. Preparação de bases para LLMs e AI Agents. Suporte a governança, qualidade de dados e automação com Python para auditoria de faturamento hospitalar.</div>
+      <div class="project-stack">
+        <span class="pill">GCP</span><span class="pill">LLMs</span><span class="pill">RAG</span><span class="pill">AI Agents</span><span class="pill">Python</span><span class="pill">DeepEval</span><span class="pill">RAGAS</span>
       </div>
-
-      <div class="project-card">
-        <div class="project-meta">
-          <div class="tag tag-tech">Azure · Terraform · CI/CD</div>
-          <span class="project-year">2025 · Indicium Training</span>
-        </div>
-        <div class="project-title">Pipelines ETL/ELT com Azure Data Factory</div>
-        <div class="project-desc">Construção de pipelines ETL/ELT usando Azure Data Factory durante o programa de formação. Infraestrutura como código com Terraform. Workflows Git e boas práticas de CI/CD aplicadas em arquiteturas cloud.</div>
-        <div class="project-stack">
-          <span class="pill">Azure Data Factory</span><span class="pill">Terraform</span><span class="pill">Git</span><span class="pill">CI/CD</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-meta">
-          <div class="tag tag-edu">Educação em Tech · Conteúdo</div>
-          <span class="project-year">2024 – presente</span>
-        </div>
-        <div class="project-title">Tutoriais técnicos em nuvem — AWS e dados</div>
-        <div class="project-desc">Publicação regular de tutoriais técnicos sobre AWS, pipelines de dados e conceitos de Engenharia de dados para iniciantes. Conteúdo acessível escrito por quem viveu a transição de professora para engenheira de dados.</div>
-        <div class="project-stack">
-          <span class="pill">LinkedIn</span><span class="pill">Newsletter</span><span class="pill">AWS</span><span class="pill">Databricks</span>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-meta">
-          <div class="tag tag-com">Comunidade · Diversidade</div>
-          <span class="project-year">2024 – presente</span>
-        </div>
-        <div class="project-title">Encontros de mulheres em tecnologia</div>
-        <div class="project-desc">Organização de encontros presenciais e virtuais para mulheres que estão entrando ou crescendo na área de tecnologia e dados. Espaço de aprendizado, troca de experiências e suporte mútuo na jornada tech.</div>
-        <div class="project-stack">
-          <span class="pill">Comunidade</span><span class="pill">Mulheres em Tech</span><span class="pill">Hackathons</span>
-        </div>
-      </div>
-
     </div>
+
+    <div class="project-card">
+      <div class="project-meta">
+        <div class="tag tag-tech">AWS · Databricks · ETL</div>
+        <span class="project-year">2025 · Tekwerth</span>
+      </div>
+      <div class="project-title">Pipelines escaláveis com Medallion Architecture</div>
+      <div class="project-desc">Desenvolvimento e manutenção de pipelines de dados com AWS Glue, EMR, S3, Athena e Databricks. Transformação nas camadas Bronze, Silver e Gold. Scripts PySpark e SQL para processamento eficiente, modelagem e qualidade de dados.</div>
+      <div class="project-stack">
+        <span class="pill">AWS Glue</span><span class="pill">EMR</span><span class="pill">S3</span><span class="pill">Athena</span><span class="pill">Databricks</span><span class="pill">PySpark</span><span class="pill">SQL</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-meta">
+        <div class="tag tag-tech">Azure · Terraform · CI/CD</div>
+        <span class="project-year">2025 · Indicium Training</span>
+      </div>
+      <div class="project-title">Pipelines ETL/ELT com Azure Data Factory</div>
+      <div class="project-desc">Construção de pipelines ETL/ELT usando Azure Data Factory. Infraestrutura como código com Terraform. Workflows Git e boas práticas de CI/CD aplicadas em arquiteturas cloud.</div>
+      <div class="project-stack">
+        <span class="pill">Azure Data Factory</span><span class="pill">Terraform</span><span class="pill">Git</span><span class="pill">CI/CD</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-meta">
+        <div class="tag tag-edu">Educação em Tech · Conteúdo</div>
+        <span class="project-year">2024 – presente</span>
+      </div>
+      <div class="project-title">Tutoriais técnicos em nuvem — AWS e dados</div>
+      <div class="project-desc">Publicação regular de tutoriais técnicos sobre AWS, pipelines de dados e Engenharia de Dados para iniciantes. Conteúdo acessível por quem viveu a transição de professora para engenheira de dados.</div>
+      <div class="project-stack">
+        <span class="pill">LinkedIn</span><span class="pill">Newsletter</span><span class="pill">AWS</span><span class="pill">Databricks</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-meta">
+        <div class="tag tag-com">Comunidade · Diversidade</div>
+        <span class="project-year">2024 – presente</span>
+      </div>
+      <div class="project-title">Encontros de mulheres em tecnologia</div>
+      <div class="project-desc">Organização de encontros presenciais e virtuais para mulheres que estão entrando ou crescendo na área de tecnologia e dados. Espaço de aprendizado, troca de experiências e suporte mútuo na jornada tech.</div>
+      <div class="project-stack">
+        <span class="pill">Comunidade</span><span class="pill">Mulheres em Tech</span><span class="pill">Hackathons</span>
+      </div>
+    </div>
+
   </section>
 
   <section class="section">
@@ -729,21 +535,23 @@ footer strong{color:var(--org);font-weight:500}
 
 </div>
 </div>
+<!-- ══════════════ FIM PORTFOLIO ═══════════════════════════════════════ -->
 
-<!-- ══════════════════════════════════════════════ CURSOS ══ -->
+
+<!-- ══════════════ CURSOS ═════════════════════════════════════════════ -->
 <div id="cursos" class="page">
 <div class="container">
 
   <section class="section">
     <div class="section-label">cursos pagos</div>
     <p style="font-size:14px;color:var(--fg2);margin-bottom:24px;line-height:1.7">
-      Feitos por uma engenheira dados e professora. Conteúdo técnico com linguagem acessível, exemplos do mundo real e sem enrolação.
+      Feitos por uma engenheira de dados e professora. Conteúdo técnico com linguagem acessível, exemplos do mundo real e sem enrolação.
     </p>
 
-    <div class="course-card" style="margin-bottom:16px;border-color:var(--org)">
+    <div class="course-card" style="border-color:var(--org)">
       <div class="course-header">
         <div class="course-eyebrow">disponível agora</div>
-        <div class="course-title">Posicionamento LinkedIn para mulheres</div>
+        <div class="course-title">Posicionamento LinkedIn para mulheres em tech</div>
         <div class="course-sub">Para profissionais de dados que querem ser encontradas pelas oportunidades certas</div>
       </div>
       <div class="course-body">
@@ -754,8 +562,8 @@ footer strong{color:var(--org);font-weight:500}
           <span class="pill">12 templates de mensagem</span>
           <span class="pill">Calendário editorial</span>
         </div>
-        <p style="font-size:13px;color:var(--fg2);line-height:1.65;margin-bottom:0">
-          Estratégia completa posicionamento, conteúdo e networking no LinkedIn. Para profissionais que querem recolocação e visibilidade sem postar todo dia.
+        <p style="font-size:13px;color:var(--fg2);line-height:1.65">
+          Estratégia completa de posicionamento, conteúdo e networking no LinkedIn. Para profissionais que querem recolocação e visibilidade sem postar todo dia.
         </p>
         <div class="course-footer">
           <div>
@@ -770,7 +578,7 @@ footer strong{color:var(--org);font-weight:500}
     <div class="course-card" style="opacity:.8">
       <div class="course-header muted">
         <div class="course-eyebrow" style="color:var(--fg3)">em breve</div>
-        <div class="course-title" style="color:var(--fg)">Engenheira de dadosing na prática — AWS do zero</div>
+        <div class="course-title" style="color:var(--fg)">Data Engineering na prática — AWS do zero</div>
         <div class="course-sub" style="color:var(--fg2)">Pipelines reais com Glue, S3 e Athena. Para quem quer entrar em dados sem enrolação.</div>
       </div>
       <div class="course-body">
@@ -781,12 +589,15 @@ footer strong{color:var(--org);font-weight:500}
         </div>
       </div>
     </div>
+
   </section>
 
 </div>
 </div>
+<!-- ══════════════ FIM CURSOS ════════════════════════════════════════ -->
 
-<!-- ══════════════════════════════════════════════ ARTIGOS ══ -->
+
+<!-- ══════════════ ARTIGOS ═══════════════════════════════════════════ -->
 <div id="artigos" class="page">
 <div class="container">
 
@@ -794,7 +605,7 @@ footer strong{color:var(--org);font-weight:500}
     <div class="section-label">newsletter</div>
     <div class="newsletter-box" style="margin-bottom:32px">
       <h3>Toda semana no seu inbox</h3>
-      <p>Tutoriais de AWS, pipelines de dados, carreira em tech e transição profissional. Grátis, sem spam. Já somos <strong style="color:var(--org-d)">mais de 1 mil assinantes</strong>.</p>
+      <p>Tutoriais de AWS, pipelines de dados, carreira em tech e transição profissional. Grátis, sem spam.</p>
       <div class="newsletter-row">
         <input type="email" placeholder="seu@email.com">
         <button class="btn btn-primary">assinar grátis</button>
@@ -807,7 +618,7 @@ footer strong{color:var(--org);font-weight:500}
         <div class="article-icon" style="background:rgba(232,115,42,0.15)">☁️</div>
         <div>
           <div class="tag tag-tech">AWS · Tutorial</div>
-          <div class="article-title">Pipeline de dados na AWS do zero - Glue, S3 e Athena explicados sem enrolação</div>
+          <div class="article-title">Pipeline de dados na AWS do zero — Glue, S3 e Athena explicados sem enrolação</div>
           <div class="article-meta">8 min de leitura · Abr 2025</div>
         </div>
       </div>
@@ -823,7 +634,7 @@ footer strong{color:var(--org);font-weight:500}
         <div class="article-icon" style="background:rgba(44,62,122,0.2)">🎓</div>
         <div>
           <div class="tag tag-edu">Carreira em tech</div>
-          <div class="article-title">Transição de professora para Engenheira de dados — o que ninguém te conta antes de começar</div>
+          <div class="article-title">Transição de professora para Engenheira de Dados — o que ninguém te conta antes de começar</div>
           <div class="article-meta">7 min de leitura · Fev 2025</div>
         </div>
       </div>
@@ -882,8 +693,10 @@ footer strong{color:var(--org);font-weight:500}
 
 </div>
 </div>
+<!-- ══════════════ FIM ARTIGOS ═══════════════════════════════════════ -->
 
-<!-- ══════════════════════════════════════════════ CONTATO ══ -->
+
+<!-- ══════════════ CONTATO ═══════════════════════════════════════════ -->
 <div id="contato" class="page">
 <div class="container">
 
@@ -929,14 +742,14 @@ footer strong{color:var(--org);font-weight:500}
       </div>
     </div>
     <div class="social-item" onclick="window.location='mailto:regimaria015@gmail.com'">
-      <div class="social-icon" style="background:var(--org-l);color:var(--org)">@</div>
+      <div class="social-icon" style="background:rgba(232,115,42,0.15);color:var(--org)">@</div>
       <div>
         <div class="social-name">E-mail</div>
         <div class="social-handle">regimaria015@gmail.com</div>
       </div>
     </div>
     <div class="social-item">
-      <div class="social-icon" style="background:#F5F5F5;color:#333">S</div>
+      <div class="social-icon" style="background:var(--bg3);color:var(--fg2)">S</div>
       <div>
         <div class="social-name">Substack</div>
         <div class="social-handle">Newsletter semanal de dados e tech</div>
@@ -946,9 +759,11 @@ footer strong{color:var(--org);font-weight:500}
 
 </div>
 </div>
+<!-- ══════════════ FIM CONTATO ═══════════════════════════════════════ -->
+
 
 <footer>
-  <div>Feito com 🧡 por <strong>Regilene Mariano</strong> · Engenheira de dados &amp; Professora </div>
+  <div>Feito com 🧡 por <strong>Regilene Mariano</strong> · Engenheira de Dados &amp; Professora</div>
   <div style="margin-top:6px">Ideias grandes em tecnologia, explicadas do jeito que você merece entender.</div>
 </footer>
 
